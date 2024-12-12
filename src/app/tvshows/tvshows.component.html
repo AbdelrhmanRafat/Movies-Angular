@@ -1,0 +1,13 @@
+<div class="container my-3">
+    <div class="row gy-5">
+        @for (TvShow of tvShows; track $index) {
+            <div class="col-md-2">
+                <div class="card h-100">
+                <img [src]="'https://image.tmdb.org/t/p/w500' + TvShow.poster_path"  class="img-fluid"/>
+                <h4>{{TvShow.name}}</h4>
+                <p>{{TvShow.overview.split(' ').splice(0,5).join(' ')}}</p>
+            </div> 
+            </div>
+        }
+    </div>
+    </div>

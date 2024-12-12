@@ -1,0 +1,15 @@
+<div class="container my-3">
+    <div class="row gy-5">
+        @for (Movie of Movies; track $index) {
+            <div class="col-md-2">
+                <div class="card h-100">
+                <img [src]="'https://image.tmdb.org/t/p/w500' + Movie.poster_path"  class="img-fluid"/>
+                <div class="p-1">
+                <h4>{{Movie.title}}</h4>
+                <p>{{Movie.overview.split(' ').splice(0,5).join(' ')}}</p>
+            </div>
+            </div> 
+            </div>
+        }
+    </div>
+    </div>
